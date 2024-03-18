@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<script>
+
+
+
+</script>
+
+
+<style>
+
+html {
+  height: 100%;
+  width: 100%; 
+  background-color: hsla(200,40%,30%,.4); 
+  background-image: 
+  url('login cover.jpg'); 
+  background-repeat: repeat-x; 
+  background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0; 
+  background-size: 1200px, 800px, 500px 200px, 1000px, 400px 260px; 
+  animation: 50s para infinite linear; 
+} 
+  
+  @keyframes para { 100% { 
+    background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%, 400px 0; 
+  } }
+
+  body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+}
+.main{
+	width: 350px;
+	height: 500px;
+	background: red;
+	overflow: hidden;
+  background: #141311 no-repeat center/ cover;
+	border-radius: 10px;
+	  color: #2C2E43;
+	  box-shadow: 0 0 5px #FFD523,
+	  0 0 25px #FFD523,
+	  0 0 50px #FFD523;
+	  -webkit-box-reflect: below 1px linear-gradient(transition, #FFD523)
+}
+#chk{
+	display: none;
+}
+.login{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #facd05;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #141311;
+	background: #facd05;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover {
+  background: #FFD523;
+  color: #2C2E43;
+  box-shadow: 0 0 5px #FFD523,
+    0 0 25px #FFD523;
+  -webkit-box-reflect: below 1px linear-gradient(transition, #FFD523)
+}
+.signup{
+	height: 460px;
+	background: #FFD523;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.signup label{
+	color: #2C2E43;
+	transform: scale(.6);
+}
+#b2 {
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #facd05;
+	background: #141311;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+#b2:hover {
+  background: #2C2E43;
+  color: #FFD523;
+  box-shadow: 0 0 5px #2C2E43,
+    0 0 25px #2C2E43;
+  -webkit-box-reflect: below 1px linear-gradient(transition, #2C2E43)
+}
+
+#chk:checked ~ .signup{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .signup label{
+	transform: scale(1);	
+}
+#chk:checked ~ .login label{
+	transform: scale(.6);
+}
+
+</style>
+
+
+</head>
+<body>
+<div class="gradient"></div>
+
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="login">
+				<form action="homepage.html">
+					<label for="chk" aria-hidden="true">LOGIN</label>
+					<input type="email" name="email" placeholder="Email">
+					<input type="password" name="pswd" placeholder="Password">
+					<button> Login </button>
+				</form>
+			</div>
+
+			<div class="signup">
+				<form action="homepage.html">
+
+					<label for="chk" aria-hidden="true">Sign Up</label>
+						<input type="text" name="txt" placeholder="Username">
+						<input type="email" name="email" placeholder="Email">
+					<input type="password" name="pswd" placeholder="Password">
+					<button id="b2">Sign up</button>
+				</form>
+			</div>
+		
+		</div>
+	
+
+	
+</body>
+</html>

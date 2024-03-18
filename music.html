@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+* {box-sizing: border-box;}
+
+body {
+  padding-top: 215px;
+  margin: 0;
+  background-color: #141415;
+}
+ 
+#navbar {
+  overflow: hidden;
+  background: linear-gradient(20deg, #6b5b05, #2C2E43, #000000);
+  background-size: 200%;
+  padding: 12px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow:0 0 25px #FFD523;
+}
+ 
+#navbar a {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px; 
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#navbar b {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+#navbar a:hover {
+  background: #FFD523;
+  color: #2C2E43;
+  box-shadow: 0 0 5px #FFD523,
+    0 0 25px #FFD523,
+    0 0 50px #FFD523,
+    0 0 200px #FFD523;
+  -webkit-box-reflect: below 1px linear-gradient(transition, #FFD523)
+}
+
+#navbar a.active {
+  background: #FFD523;
+  color: #2C2E43;
+  box-shadow: 0 0 5px #FFD523,
+    0 0 25px #FFD523,
+    0 0 50px #FFD523,
+    0 0 200px #FFD523;
+  -webkit-box-reflect: below 1px linear-gradient(transition, #FFD523)
+}
+ 
+#navbar-right {
+  float: right;
+}
+ 
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  #navbar-right {
+    float: none;
+  }
+}
+
+
+
+h1 {
+    margin: 0;
+    font-size: 25px;
+    color: #fff;
+    padding: 0 10%;
+}
+h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #ccc;
+    padding: 0 10%;
+}
+.container {
+    width: 100%;
+}
+
+
+.music-player {
+    position: relative;
+    width: 300px;
+    height: 370px;
+    margin-top: 6%;
+    border-radius: 0 0 10px 10px;
+    background-color: #262629;
+  box-shadow: 0 0 3px #FFD523,
+  0 0 30px #FFD523;
+    margin-left: 115px;
+}
+
+
+.music-player:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.cover {
+    float: left;
+    width: 100%;
+    height: 66%;
+}
+.cover img {
+    display: block;
+    position: absolute;
+    top: 8%;
+    left: 14%;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.titre {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.lecteur {
+    width: 100%;
+    display: block;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+#player{
+  width: 90%;
+  scale: 90%;
+}
+
+
+.music-item .item{
+	float:left;
+	margin-bottom:50px;
+}
+
+
+.music-item .item:hover{
+  transform: scale(1.05);
+  transition: 0.3s;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.textbox h1 {
+  color: #FFD523;
+  font-size: 9em;
+  font-weight: 1000;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 10px 10px 20px #141415;
+  font-style: "Poppins" sans-serif;
+  filter: drop-shadow(0 1px 3px);
+  margin-bottom: 100px;
+}
+
+</style>
+</head>
+<body>
+<div id="navbar">
+  <b class="navbar-brand" href="#">
+    <img src="logo 2.png" height="50"> </b>
+  <div id="navbar-right">
+    <a href ="homepage.html">Home</a>
+    <a href ="profile.html">Profile</a>
+    <a class="active" href ="#">Music</a>
+    <a href ="gallery.html">Gallery</a>
+    <a href ="insights.html">Insights</a>
+    <a href ="about.html">About</a>
+    <a href ="login intro.html">Logout</a>
+</div>
+</div>
+</div>
+
+  <div class="textbox">
+    <h1>PLAYLIST</h1>
+  </div>
+
+     <div class="contain">
+       <div class="row"
+        <div class="container">
+
+           <div class="music-item">
+             <div class="item">
+            <div class="music-player">
+                <div class="cover">
+                    <img src="Music/Album Covers/fresh eyes.png" alt="">
+                </div>
+                <div class="titre">
+                    <center><h3>Andy Grammer</h3>
+                    <h1>Fresh Eyes</h1></center>
+                </div>
+                <div class="lecteur">
+                    <center><audio id="player" controls>
+                        <source src="Music/MP3/fresh eyes.mp3" type="audio/mp3"/>
+                    </audio></center>
+                </div>
+                </div>
+                </div>
+                </div>
+
+           <div class="music-item">
+             <div class="item">
+            <div class="music-player">
+                <div class="cover">
+                    <img src="Music/Album Covers/painkiller.jpeg" alt="">
+                </div>
+                <div class="titre">
+                    <center><h3>Ruel</h3>
+                    <h1>Painkiller</h1></center>
+                </div>
+
+                <div class="lecteur">
+                    <center><audio id="player" controls>
+                        <source src="Music/MP3/painkiller.mp3" type="audio/mp3"/>
+                    </audio></center>
+                </div>
+              </div>
+              </div>
+              </div>
+
+           <div class="music-item">
+             <div class="item">
+            <div class="music-player">
+                <div class="cover">
+                    <img src="Music/Album Covers/fall in love alone.jpeg" alt="">
+                </div>
+                <div class="titre">
+                    <center><h3>Stacey Ryan</h3>
+                    <h1>Fall In Love Alone</h1></center>
+                </div>
+                <div class="lecteur">
+                    <center><audio id="player" controls>
+                        <source src="Music/MP3/fall in love alone.mp3" type="audio/mp3"/>
+                    </audio></center>
+                </div>
+                </div>
+                </div>
+                </div>
+
+           <div class="music-item">
+             <div class="item">
+            <div class="music-player">
+                <div class="cover">
+                    <img src="Music/Album Covers/trust fund baby.jpeg" alt="">
+                </div>
+                <div class="titre">
+                    <center><h3>Why Don't We</h3>
+                    <h1>Trust Fund Baby</h1></center>
+                </div>
+                <div class="lecteur">
+                    <center><audio id="player" controls>
+                        <source src="Music/MP3/trust fund baby.mp3" type="audio/mp3"/>
+                    </audio></center>
+                </div>
+                </div>
+                </div>
+                </div>
+
+           <div class="music-item">
+             <div class="item">
+            <div class="music-player">
+                <div class="cover">
+                    <img src="Music/Album Covers/monster.jpg" alt="">
+                </div>
+                <div class="titre">
+                    <center><h3>Shawn Mendes & Justin Bieber</h3>
+                    <h1>Monster</h1></center>
+                </div>
+                <div class="lecteur">
+                    <center><audio id="player" controls>
+                        <source src="Music/MP3/monster.mp3" type="audio/mp3"/>
+                    </audio></center>
+                </div>
+                </div>
+                </div>
+                </div>
+
+                  </div>
+            </div>
+        </div>
+    </div>
+
+   
+ 
+</div>
+</body>
+</html>

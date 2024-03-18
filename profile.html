@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive CV </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+* {box-sizing: border-box;}
+
+body {
+  padding-top: 120px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+ 
+#navbar {
+  overflow: hidden;
+  background: linear-gradient(20deg, #6b5b05, #2C2E43, #000000);
+  background-size: 200%;
+  padding: 12px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow:0 0 25px #FFD523;
+}
+ 
+#navbar a {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px; 
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#navbar b {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+#navbar a:hover {
+  background: #FFD523;
+  color: #2C2E43;
+  box-shadow: 0 0 5px #FFD523,
+    0 0 25px #FFD523,
+    0 0 50px #FFD523,
+    0 0 200px #FFD523;
+  -webkit-box-reflect: below 1px linear-gradient(transition, #FFD523)
+}
+
+#navbar a.active {
+  background: #FFD523;
+  color: #2C2E43;
+  box-shadow: 0 0 5px #FFD523,
+    0 0 25px #FFD523,
+    0 0 50px #FFD523,
+    0 0 200px #FFD523;
+  -webkit-box-reflect: below 1px linear-gradient(transition, #FFD523)
+}
+ 
+#navbar-right {
+  float: right;
+}
+ 
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  #navbar-right {
+    float: none;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", SansSerif;
+}
+
+body {
+  background-color: #141415;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 200vh;
+  padding-top: 215px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 1000px;
+  background-color: #fff;
+  margin: 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 0 5px #FFD523,
+    0 0 50px #FFD523;
+}
+.container .left_Side {
+  position: relative;
+  background-color: #000000;
+  padding: 40px;
+
+}
+.profileText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText .imgBx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profileText .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo {
+  width: 100%;
+  height: auto;
+}
+.profileText h3 {
+  color: #fff;
+  font-size: 1.3em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.profileText h3 span {
+  font-size: 0.7em;
+  font-weight: 300;
+}
+.contactInfo {
+  padding-top: 40px;
+}
+.title {
+  color: #FFD523;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.contactInfo ul {
+  position: relative;
+}
+.contactInfo ul li {
+  list-style: none;
+  position: relative;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #FFD523;
+}
+.contactInfo ul li span {
+  color: #fff;
+  font-weight: 300;
+}
+.contactInfo.education li {
+  margin-bottom: 15px;
+}
+.contactInfo.education h5 {
+  color: #FFD523;
+  font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+.contactInfo.education h4 {
+  color: #fff;
+  font-weight: 300;
+}
+.contactInfo.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: #081921;
+  display: block;
+  margin-top: 5px;
+}
+.contactInfo.language .percent div {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #FFD523;
+}
+.container .right_Side {
+  position: relative;
+  background-color: #FCFAF1;
+  padding: 40px;
+}
+.about {
+  margin-bottom: 50px;
+}
+.about:last-child {
+  margin-bottom: 0;
+}
+.title2 {
+  color: #00000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+p {
+  color: #081921;
+}
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.about .box .year_company {
+  min-width: 150px;
+}
+.about .box .year_company h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: #003147;
+  font-size: 16px;
+}
+.skills .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.skills .box h4 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 500;
+}
+.skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+}
+.skills .box .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #FFD523;
+}
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.interest ul li {
+  list-style: none;
+  color: black;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.interest ul li .fa {
+  color: #FFD523;
+  font-size: 18px;
+  width: 20px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .interest ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .about .box {
+    flex-direction: column;
+  }
+  .about .box .year_company {
+    margin-bottom: 5px;
+  }
+  .interest ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills .box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.english100 {
+  width: 100%;
+}
+.russianw90 {
+  width: 90%;
+}
+
+.htmlws30 {
+  width: 75%;
+}
+.cssws45 {
+  width: 60%;
+}
+.jsws70 {
+  width: 30%;
+}
+.phws40 {
+  width: 90%;
+}
+.ilws60 {
+  width: 80%;
+}
+.adw70 {
+  width: 60%;
+}
+
+.textbox h1 {
+  display: block;
+  color: #FFD523;
+  font-size: 9em;
+  font-weight: 1000;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 10px 10px 20px #141415;
+  font-style: "Poppins" sans-serif;
+  filter: drop-shadow(0 1px 3px);
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+</style>
+</head>
+<body>
+<div id="navbar">
+  <b class="navbar-brand" href="#">
+    <img src="logo 2.png" height="50"> </b>
+  <div id="navbar-right">
+    <a href ="homepage.html">Home</a>
+    <a class="active" href ="#">Profile</a>
+    <a href ="music.html">Music</a>
+    <a href ="gallery.html">Gallery</a>
+    <a href ="insights.html">Insights</a>
+    <a href ="about.html">About</a>
+    <a href ="login intro.html">Logout</a>
+</div>
+</div>
+</div>
+
+
+  <div class="textbox">
+    <h1>PROFILE</h1>
+  </div>
+  
+
+ <div class="container">
+    <div class="left_Side">
+        <div class="profileText">
+            <div class="imgBx">
+                <img class="photo" src="id picture.png">
+            </div>
+            <br>
+            <h3>Erica May Besas Soriano <br><span>Senior High School Student</span> </h3>
+        </div>
+
+        <div class="contactInfo">
+            <h3 class="title">Contact Info</h3>
+            <ul>
+                <li>
+                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span class="text">(+63) 947 264 2715</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                    <span class="text">ericamaysoriano@gmail.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                    <span class="text">www.simply-life-2.jimdosite.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                    <span class="text">www.facebook.com/ericamaysoriano</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span class="text">Quezon City, Philippines</span>icon
+                </li>
+            </ul>
+        </div>
+        <div class="contactInfo education">
+            <h3 class="title">Achievements</h3>
+            <ul>
+                <li>
+                    <h5>2021 - 2022</h5>
+                    <h4>With High Honor<br> <span style="font-size: 1.02em"><i><b>Senior High School - STEM 11</b></i></span></h4>
+                    <h4>Metro Manila College Inc.</h4>
+                </li>
+                <li>
+                    <h5>2020 - 2021</h5>
+                    <h4>Graduated With High Honor <br> <span style="font-size: 1.02em"><i><b>Senior High School - STE Program</b></i></span></h4>
+                    <h4>San Bartolome High School</h4>
+                </li>
+                <li>
+                    <h5>2016 - 2017</h5>
+                    <h4>Graduated With Honor</span></h4>
+                    <h4>Rosa L. Susano Elementary School</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="contactInfo language">
+            <h3 class="title">Languages</h3>
+            <ul>
+                <li>
+                    <span class="text">Tagalog</span>
+                    <span class="percent">
+                        <div class="englishw50"></div>
+                    </span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="text">English</span>
+                    <span class="percent">
+                        <div class="russianw90"></div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right_Side">
+        <div class="about">
+            <h2 class="title2">Objective</h2>
+            <p style="text-align: justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A dedicated and versatile individual that seeks to apply her knowledge to contribute significantly to the company's growth, along with further developing a valuable skill set that would be beneficial for her professional career.</p>
+        </div>
+        <div class="about">
+            <h2 class="title2">Education</h2>
+            <div class="box">
+                <div class="year_company">
+                    <h5>Academic Years</h5>
+                    <h5>2021 - 2023</h5>
+                </div>
+                <div class="text">
+                    <h4>Science, Technology, Engineering and Mathematics Strand <br> Senior High School</h4>
+                    <p>Metro Manila College Inc.</p>
+                </div>
+            </div>
+
+            <div class="box">
+              <div class="year_company">
+                <h5>Academic Years</h5>
+                <h5>2017 - 2021</h5>
+              </div>
+              <div class="text">
+                <h4>Science, Technology, and Engineering Program <br> Junior High School</h4>
+                <p>San Bartolome High School</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="year_company">
+                <h5>Academic Years</h5>
+                <h5>2011 - 2017</h5>
+              </div>
+              <div class="text">
+                <h4>Basic Education - Grade 1 to Grade 6</h4>
+                <p>Rosa L. Susano Elementary School</p>
+              </div>
+            </div>
+            
+          <br>
+  
+        <div class="about skills">
+            <h2 class="title2">Professionals skills</h2>
+            <div class="box">
+                <h4>HTML</h4>
+                <div class="percent">
+                    <div class="htmlws30"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>CSS</h4>
+                <div class="percent">
+                    <div class="cssws45"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>JavaScript</h4>
+                <div class="percent">
+                    <div class="jsws70"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Microsoft Word</h4>
+                <div class="percent">
+                    <div class="phws40"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Microsoft Powerpoint</h4>
+                <div class="percent">
+                    <div class="ilws60"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Microsoft Excel</h4>
+                <div class="percent">
+                    <div class="adw70"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about interest">
+            <h2 class="title2">Skills</h2>
+            <ul>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i> Goal-Oriented</li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i> Communication </li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i> Leadership </li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i> Problem-solving </li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i> Decision-making </li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i> Attention to Detail </li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i> Time-Management </li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i> Computer Skills</li>
+            </ul>
+        </div>
+        
+        <div class="about interest">
+            <h2 class="title2">Hobbies</h2>
+            <ul>
+                <li><i class="fa fa-book" aria-hidden="true"></i> Reading</li>
+                <li><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</li>
+                <li><i class="fa fa-cutlery" aria-hidden="true"></i> Cooking</li>
+                <li><i class="fa fa-microphone" aria-hidden="true"></i> Singing</li>
+                <li><i class="fa fa-television" aria-hidden="true"></i> Watching</li>
+                <li><i class="fa fa-bicycle" aria-hidden="true"></i> Biking </li>
+                <li><i class="fa fa-pencil" aria-hidden="true"></i> Drawing </li>
+                <li><i class="fa fa-map" aria-hidden="true"></i> Traveling</li>
+            </ul>
+        </div>
+        </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+</body>
+</html>

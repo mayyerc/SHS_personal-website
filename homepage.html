@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+<style>
+
+@import url("https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLFj_Z11lFc-K.woff2");
+
+.home { 
+  position: absolute; 
+  height: 130vh; 
+  width: 100%; 
+  background-image: url("home.png"); 
+  background-size: cover; 
+  background-position: center; 
+}
+
+.content .textbox h1 { 
+  color: #FFD523; 
+  font-size: 9em; 
+  font-weight: 1000; 
+  text-transform: uppercase; 
+  position: absolute; 
+  bottom: 210px; 
+  left: 110px; 
+  text-align: center;
+  top: 250px;
+  text-shadow: 10px 10px 20px #141415;
+} 
+.content .textbox h2 { 
+  color: #FFD523; 
+  font-size: 9em; 
+  font-weight: 1000; 
+  text-transform: uppercase; 
+  position: absolute; 
+  bottom: 210px; 
+  right: 90px; 
+  text-align: center;
+  top: 220px;
+  text-shadow: 10px 10px 20px #141415;
+} 
+.content .textbox a { 
+  position: absolute; 
+  margin-top: 20px; 
+  padding: 8px 20px; 
+  background-color: #FFD523;
+  color: #141415; 
+  border-radius: 40px; 
+  font-weight: 500; 
+  text-decoration: none; 
+  text-transform: uppercase;
+  bottom: 100px; 
+  margin-left: 580px;
+  scale: 150%;
+  box-shadow: 1rem #333;
+}
+
+.content .textbox a:hover{
+  box-shadow: 0 0 5px #FFD523,
+  0 0 25px #FFD523;
+  transform: scale(1.05);
+}
+
+* {box-sizing: border-box;}
+
+body {
+  padding-top:120px;
+  margin: 0;
+  width: 100%;
+  background-color: #141415;
+  height: 150vh;
+}
+ 
+#navbar {
+  overflow: hidden;
+ background: linear-gradient(20deg, #6b5b05, #2C2E43, #000000);
+ background-size: 200%;
+  padding: 12px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow:0 0 25px #FFD523;
+}
+ 
+#navbar a {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px; 
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#navbar b {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+#navbar a:hover {
+  background: #FFD523;
+  color: #2C2E43;
+  box-shadow: 0 0 5px #FFD523,
+    0 0 25px #FFD523,
+    0 0 50px #FFD523,
+    0 0 200px #FFD523;
+  -webkit-box-reflect: below 1px linear-gradient(transition, #FFD523)
+}
+
+#navbar a.active {
+  background: #FFD523;
+  color: #2C2E43;
+  box-shadow: 0 0 5px #FFD523,
+    0 0 25px #FFD523,
+    0 0 50px #FFD523,
+    0 0 200px #FFD523;
+  -webkit-box-reflect: below 1px linear-gradient(transition, #FFD523)
+}
+ 
+#navbar-right {
+  float: right;
+}
+ 
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  #navbar-right {
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+<div id="navbar">
+  <b class="navbar-brand" href="#">
+    <img src="logo 2.png" height="50"> </b>
+  <div id="navbar-right">
+    <a class="active" href ="#">Home</a>
+    <a href ="profile.html">Profile</a>
+    <a href ="music.html">Music</a>
+    <a href ="gallery.html">Gallery</a>
+    <a href ="insights.html">Insights</a>
+    <a href ="about.html">About</a>
+    <a href ="login intro.html">Logout</a>
+</div>
+</div>
+</div>
+
+<div class="home">
+   <div class="content">
+  <div class="textbox"> 
+   <h1>Hi, I'm</h1> 
+   <h2>Erica!</h2> 
+   <a href="profile.html" class="active2"><b>Get to Know Me More</b></a> 
+   </div> </div> </div>
+
+ 
+
+</body>
+</html>
